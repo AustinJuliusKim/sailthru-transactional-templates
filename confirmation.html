@@ -202,7 +202,7 @@
       }
 
       /* ------------ HEADER ------------ */
-      .headerNav { background-color:#e4e4e4; }
+      .headerNav { background-color:#1e1e1e; }
 
       /* ------------ FOOTER ------------ */
       .footer-nav-links { line-height: 2; }
@@ -430,79 +430,56 @@
 
     </style>
   </head>
-  <body style="margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#eff0f5;mso-line-height-rule:exactly;-webkit-font-smoothing:antialiased;-ms-text-size-adjust:none !important;">
+  <body style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;margin: 0; padding: 0;background-color:#e4e4e4;" class="body">
     <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
-      <div class="webkit" style="max-width:600px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;">
-      <!--[if (gte mso 9)|(IE)]>
-        <table width="600" align="center" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
+      <div class="webkit" style="max-width:880px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" width="100%" bgcolor="#e4e4e4" role="presentation">
           <tr>
             <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-      <![endif]-->
-        <table class="outer" align="center" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;margin:0 auto;width:100%;max-width:600px;">
-            <!-- Start: Top Links -->
-            <tr>
-                <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                        <tr>
-                            <td class="inner contents footer" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;font-size:12px;text-align:center;color:#7d7e7d;"><!-- Replace: Subject Line Here -->
-                                <span style="color:#7a7880;">Congratulations! You are now subscribed to Loot Crate!</span></td>
-                        </tr>
-                    </table></td>
-            </tr>
-            <!-- End: Top Links -->
-
-            <td class="one-column" bgcolor="#e4e4e4" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;border-bottom:none;">
-              <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;">
-    						<tbody>
-                  <tr>
-    							  <td class="headerNav contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:35px;padding-bottom:35px;padding-right:20px;padding-left:20px;width:100%;">
-                      <div style="text-align:center;">
-                        <a href="https://www.lootcrate.com/" target="_blank" style="color:#343434;text-decoration:underline;">
-                          <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
-                        </a>
-                      </div>
-                    </td>
-    						  </tr>
-    				  	</tbody>
+        			<table bgcolor="#e4e4e4" width="880" align="center" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;" >
+        				<tr>
+       	 					<td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+        <![endif]-->
+        <table class="outer" align="center" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:100%;max-width:880px;">
+          <!-- Start: Top Links -->
+          <tr>
+            <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+              <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                <tr>
+                  <td class="inner contents footer" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;font-size:12px;text-align:center;color:#7d7e7d;">
+                    <!-- Replace: Subject Line Here -->
+                    <!-- Dynamic -->
+                    <!--  PRODUCT_TYPE == [ 'limited']-->
+                    <span style="color:#7a7880;">Congratulations! {if %PRODUCT_TYPE% == 'limited'}You bought{else}You are now subscribed to{/if} {%PRODUCT_DISPLAY_NAME%}</span>
+                  </td>
+                </tr>
               </table>
             </td>
+          </tr>
+          <!-- End: Top Links -->
 
-            <!-- Start: HEADER -->
-            <tr>
-                <td class="headerNav left-sidebar" style="border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#ff4c00;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;background-color:#1e1e1e;text-align:center;font-size:0;"><!--[if (gte mso 9)|(IE)]>
-                        <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
-                        <tr>
-                        <td width="600" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-                        <![endif]-->
+          <!-- Start: HEADER -->
+          <td class="one-column" bgcolor="#1e1e1e" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#ff4c00;">
+            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;">
+  						<tbody>
+                <tr>
+  							  <td class="headerNav contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:35px;padding-bottom:35px;padding-right:20px;padding-left:20px;width:100%;">
+                    <div style="text-align:center;">
+                      <a href="https://www.lootcrate.com/" target="_blank" style="color:#e4e4e4;text-decoration:underline;">
+                        <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
+                        <!-- <img src={%LOGO_URL%} alt={%PRODUCT_DISPLAY_NAME%} width="60" class="logo button" style="display:inline-block;" title={%PRODUCT_DISPLAY_NAME%} border="0"> -->
 
-                    <!-- Start: Logo -->
-
-                    <div class="column left" style="width:100%;display:inline-block;vertical-align:middle;max-width:600px;">
-                        <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                            <tr>
-                                <td class="innerHeader" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;"><!-- Replace: Logo Link Here -->
-                                    <a href="https://www.lootcrate.com" target="_blank" style="color:#7d7e7d;text-decoration:underline;">
-                                    <!-- Replace: Logo Image Here --><img src="http://cdn-store.lootcrate.com/em/transactional/core-logo.gif" height="38" alt="LOOTCRATE" style="border-width:0;border-style:none;display:block;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:24px;color:#ffffff;font-weight:bold;"></a></td>
-                            </tr>
-                        </table>
+                      </a>
                     </div>
+                  </td>
+  						  </tr>
+  				  	</tbody>
+            </table>
+          </td>
+          <!-- End: HEADER -->
 
-                    <!-- End: Logo -->
-
-                    <!--[if (gte mso 9)|(IE)]>
-                        </td>
-                        <![endif]-->
-
-                    <!--[if (gte mso 9)|(IE)]>
-
-                        </tr>
-                        </table>
-                        <![endif]--></td>
-            </tr>
-            <!-- End: HEADER -->
-
-
-
-            <!-- Start: CONTENT-->
+          <!-- Start: CONTENT-->
 
             <!-- Start: HTML Text -->
             <tr>
@@ -1149,40 +1126,135 @@
 
             <!-- End: CONTENT -->
 
-            <!-- Start: Footer - Social Media -->
+            <!-- START: FOOTER -->
+      			<tr>
+      				<td class="one-column" bgcolor="#e4e4e4" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;">
+      						<tr>
+      							<td class="headerNav contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:50px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;">
+                      <div style="text-align:center;">
+                        <a href="https://www.facebook.com/lootcrate" target="_blank" style="text-decoration:none;color:#343434;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <img  class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/facebook.png" height="34" alt="facebook" style="border-width:0;border-style:none;display:inline;-ms-interpolation-mode:bicubic;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;font-size:32px;color:#343434;font-weight:bold;" >
+                        </a>&nbsp;&nbsp;
+                        <a href="https://twitter.com/lootcrate" target="_blank" style="text-decoration:none;color:#343434;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <img  class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/twitter.png" height="34" alt="twitter" style="border-width:0;border-style:none;display:inline;-ms-interpolation-mode:bicubic;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;font-size:32px;color:#343434;font-weight:bold;" >
+                        </a>&nbsp;&nbsp;
+                        <a href="https://www.instagram.com/lootcrate/" target="_blank" style="text-decoration:none;color:#343434;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <img  class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/instagram.png" height="34" alt="instagram" style="border-width:0;border-style:none;display:inline;-ms-interpolation-mode:bicubic;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;font-size:32px;color:#343434;font-weight:bold;" >
+                        </a>&nbsp;&nbsp;
+                        <a href="https://www.youtube.com/user/LootCrate" target="_blank" style="text-decoration:none;color:#343434;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <img  class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/youtube.png" height="34" alt="youtube" style="border-width:0;border-style:none;display:inline;-ms-interpolation-mode:bicubic;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;font-size:32px;color:#343434;font-weight:bold;" >
+                        </a>&nbsp;&nbsp;
+                        <a href="http://lootcrate.tumblr.com/" target="_blank" style="text-decoration:none;color:#343434;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <img  class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/tumblr.png" height="34" alt="tumblr" style="border-width:0;border-style:none;display:inline;-ms-interpolation-mode:bicubic;font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;font-size:32px;color:#343434;font-weight:bold;" >
+                        </a>
+                      </div>
+                    </td>
+      						</tr>
 
-            <tr>
-                <td class="footerlayout headerNav" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#1e1e1e !important;border-bottom:1px solid #1E1E1E;border-top:1px solid #1E1E1E;"><div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-                        <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                            <tr>
-                                <td class="inner" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px; border-bottom:1px solid #1E1E1E"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:center;">
-                                        <tr>
-                                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><a href="https://www.facebook.com/lootcrate" target="_blank" style="color:#7d7e7d;text-decoration:underline;"><img class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/0517_core-template_facebook.gif" alt="Facebook" width="39" border="0" style="display:inline-block;vertical-align:middle;border-width:0;border-style:none;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:16px;color:#ffffff;font-weight:bold;width:100%;max-width:39px;height:auto;"></a></td>
-                                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><a href="https://twitter.com/lootcrate" target="_blank" style="color:#7d7e7d;text-decoration:underline;"><img class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/0517_core-template_twitter.gif" alt="Twitter" width="39" border="0" style="display:inline-block;vertical-align:middle;border-width:0;border-style:none;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:16px;color:#ffffff;font-weight:bold;width:100%;max-width:39px;height:auto;"></a></td>
-                                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><a href="https://www.instagram.com/lootcrate/" target="_blank" style="color:#7d7e7d;text-decoration:underline;"><img class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/0517_core-template_instagram.gif" alt="Instagram" width="39" border="0" style="display:inline-block;vertical-align:middle;border-width:0;border-style:none;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:16px;color:#ffffff;font-weight:bold;width:100%;max-width:39px;height:auto;"></a></td>
-                                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><a href="https://www.youtube.com/user/LootCrate" target="_blank" style="color:#7d7e7d;text-decoration:underline;"><img class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/0517_core-template_youtube.gif" alt="Youtube" width="39" border="0" style="display:inline-block;vertical-align:middle;border-width:0;border-style:none;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:16px;color:#ffffff;font-weight:bold;width:100%;max-width:39px;height:auto;"></a></td>
-                                            <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><a href="http://lootcrate.tumblr.com/" target="_blank" style="color:#7d7e7d;text-decoration:underline;"><img class="button" src="http://cdn-store.lootcrate.com/em/2016/LCEM/0517_core-template_tumblr.gif" alt="Tumblr" width="39" border="0" style="display:inline-block;vertical-align:middle;border-width:0;border-style:none;-ms-interpolation-mode:bicubic;font-family:sans-serif;font-size:16px;color:#ffffff;font-weight:bold;width:100%;max-width:39px;height:auto;"></a></td>
-                                        </tr>
-                                    </table></td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <!--[if (gte mso 9)|(IE)]>
-                        </td>
-                        </tr>
-                        </table>
-                        <![endif]--></td>
-            </tr>
-            <!-- End: Footer - Social Media -->
+      						<tr>
+      							<td class="footer-nav-links inner contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:30px;padding-bottom:0px;padding-right:20px;padding-left:20px;width:100%;line-height:2;">
+      								<div style="text-align:center;">
+      									<a class="text-link" href="https://www.lootcrate.com/crates?filter=pop-culture-crates" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Pop Culture Crates
+                          </span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-link" href="https://www.lootcrate.com/crates?filter=apparel-crates" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Apparel Crates
+                          </span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-link" href="https://www.lootcrate.com/crates?filter=gaming-crates" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Gaming Crates
+                          </span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-link" href="https://www.lootcrate.com/crates?filter=film-tv-crates" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Film &amp; TV Crates
+                        </span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-link" href="https://www.lootcrate.com/crates" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            All Crates
+                          </span>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-link" href="https://vault.lootcrate.com/" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:none;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Loot Vault
+                          </span>
+                        </a>
+      								</div>
+                    </td>
+      						</tr>
+      						<tr>
+      							<td class="footer-nav-links inner contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;line-height:2;">
+      								<div style="text-align:center;">
+                        <a href="https://www.lootcrate.com/community" target="_blank" style="text-decoration:none;color:#343434;padding-top:5px;padding-bottom:0px;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            Community&nbsp;&nbsp;
+                          </span>
+                        </a>
+                       <a href="https://www.lootcrate.com/share" target="_blank" style="text-decoration:none;color:#343434;padding-top:5px;padding-bottom:0px;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                         <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                           &nbsp;&nbsp;Refer-A-Friend&nbsp;&nbsp;
+                         </span>
+                       </a>
+                        <a href="https://www.lootcrate.com/help" target="_blank" style="text-decoration:none;color:#343434;padding-top:5px;padding-bottom:0px;padding-right:0;padding-left:0;text-align:center;font-weight:normal;">
+                          <span class="nav" style="color:#343434;white-space:nowrap;font-family:Arial, sans-serif;font-size:12px;mso-line-height-rule:exactly;text-align:center;vertical-align:top;letter-spacing:1px;">
+                            &nbsp;&nbsp;FAQ and Help
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+      						</tr>
+      						<tr>
+      							<td class="footer-nav-links inner contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:30px;padding-bottom:50px;padding-right:20px;padding-left:20px;width:100%;line-height:1.6;color:#343434;text-align: center;font-size: 12px">
+      								<a href="https://www.lootcrate.com/" target="_blank" style="font-family:proxima-nova-regular, 'Proxima Nova', Helvetica, Arial, sans-serif;color:#343434;text-decoration:underline;">
+                        <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-b.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
+                      </a>
+                      <br>
+      								<br>&copy; Loot Crate 3401 Pasadena Ave, Los Angeles, CA 90031<br>
+      								<a href="{view_url}" target="_blank" style="color:#343434;text-decoration:underline;">
+                        View online
+                      </a>
+                      <br>
+                      <br>
+                      This message was sent to {email} because you are registered at Lootcrate.com.<br>If you no longer wish to receive emails, safely
+                      <a href="{optout_confirm_url}" target="_blank" style="color:#343434;text-decoration:underline;"><span style="color:#343434;">unsubscribe</span></a>.
+                      <br><br>If you have any questions, please see our
+                      <a href="https://help.lootcrate.com/hc/en-us" target="_blank" style="color:#343434;text-decoration:underline;"><span style="color:#343434;">Help Center</span></a>
+                      for answers!<br>If you still need help,
+                      <a href="https://help.lootcrate.com/hc/en-us/requests/new" target="_blank" style="color:#343434;text-decoration:underline;"><span style="color:#343434;">contact our support team</span></a>!
+                      <br><br>We respect your privacy. View our
+                      <a href="https://www.lootcrate.com/privacy-policy" target="_blank" style="color:#343434;text-decoration:underline;"> <span style="color:#343434;">Privacy Policy</span></a>.
+                      View our
+                      <a href="https://www.lootcrate.com/terms-conditions" target="_blank" style="color:#343434;text-decoration:underline;"> <span style="color:#343434;">Terms of Service</span></a>.
+                      <br>Interested in partnering with Loot Crate?
+                      <a href="https://www.lootcrate.com/contact" target="_blank" style="color:#343434;text-decoration:underline;"> <span style="color:#343434;">Contact Us</span></a>
+                    </td>
+      						</tr>
+      					</table>
+              </td>
+      			</tr>
+      			<!-- END: FOOTER -->
 
         </table>
         <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                </tr>
+              </table>
             </td>
-            </tr>
-            </table>
-            <![endif]-->
-    </div>
-</center>
-</body>
+          </tr>
+        </table>
+        <![endif]-->
+      </div>
+    </center>
+  </body>
 </html>
