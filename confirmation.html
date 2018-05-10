@@ -469,7 +469,7 @@
                       <a href="https://www.lootcrate.com/" target="_blank" style="color:#e4e4e4;text-decoration:underline;">
                         <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
                         <!-- Dynamic: Header Logo-->
-                        <!-- <img src={%LOGO_URL%} alt={%PRODUCT_DISPLAY_NAME%} width="60" class="logo button" style="display:inline-block;" title={%PRODUCT_DISPLAY_NAME%} border="0"> -->
+                        <img src={%LOGO_URL%} alt={%PRODUCT_DISPLAY_NAME%} width="60" class="logo button" style="display:inline-block;" title={%PRODUCT_DISPLAY_NAME%} border="0">
                       </a>
                     </div>
                   </td>
@@ -480,232 +480,263 @@
           <!-- End: HEADER -->
 
           <!-- Start: CONTENT-->
-            <!-- Start: HTML Text -->
-            <tr>
-              <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;">
+          <!-- Start: HTML Text -->
+          <!-- Start: Body -->
+          <tr>
+            <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;">
+              <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                <tr>
+                  <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:0px;padding-right:30px;padding-left:30px;width:100%;">
+                    <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;font-weight:400;line-height:3;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                      <!-- Dynamic: Looter Name -->
+                      Hi {%LOOTER_OR_FIRST_NAME%},
+                    </p>
+                    <p class="textLeft" style="text-align:left;color:#7a7880;font-size:28px;line-height:1.5;font-weight:100;margin-top:0;margin-bottom:0;font-weight:700;margin-right:0;margin-left:0;">
+                      <!-- Dynamic:  -->
+                      Thank you for your {if %PRODUCT_TYPE% == 'limited'}purchase{else}subscription{/if}!
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
+                    <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
+                      <!-- Dynamic:  -->
+                      You did it! You've successfully {if %PRODUCT_TYPE% == 'limited'}purchased{else}subscribed to{/if} {%PRODUCT_DISPLAY_NAME%} and we're thrilled to welcome you to the Looter community. Your {if %PRODUCT_TYPE% != 'limited'}first{/if} crate should arrive between {%FIRST_SHIP_MONTH%} {%SHIP_DATE_RANGE%} (Don't worry you'll get a tracking email). {if %PRODUCT_TYPE% !== 'limited'}Remember, this is a {%PRODUCT_PLAN_PERIOD%}-month recurring subscription. THat means that after you receive your {%NUMBER_OF_CRATES%} crates, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).{/if}
+                    </p>
+                    <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
+                      <br/>Thanks! We Love You!<br/>
+                      Loot Crate
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End: Body -->
+          <!-- End: HTML Text -->
+
+          <!-- Start: Receipt -->
+          <!-- Start: Header HTML Text -->
+          <tr>
+            <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;">
+              <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                <tr>
+                  <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;width:100%;">
+                    <p style="Margin:0;font-weight:700;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
+                      YOUR ORDER
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End: HTML Text -->
+
+          <!-- Start: Spacer -->
+          <tr>
+            <td height="15" valign="top" align="center" class="center" style="height:1px;background-color:#000;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;border-top-width:1px;border-top-color:#eff0f5;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#eff0f5;"></td>
+          </tr>
+          <!-- End: Spacer -->
+
+          <!-- Start: Two Column (Left over Right) -->
+          <tr>
+            <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;">
+              <!--[if (gte mso 9)|(IE)]>
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
+                  <tr>
+                    <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+              <![endif]-->
+              <!-- Start: Left Column (Top)-->
+              <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
                 <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
                   <tr>
-                    <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:0px;padding-right:30px;padding-left:30px;width:100%;">
-                      <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;font-weight:400;line-height:3;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
-                        <!-- Dynamic: Looter Name -->
-                        Hi {%LOOTER_OR_FIRST_NAME%},
-                      </p>
-                      <p class="textLeft" style="text-align:left;color:#7a7880;font-size:28px;line-height:1.5;font-weight:100;margin-top:0;margin-bottom:0;font-weight:700;margin-right:0;margin-left:0;">
-                        Thank you for your {if %PRODUCT_TYPE% == 'limited'}purchase{else}subscription{/if}!
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
-                      <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
-                        You did it! You've successfully {if %PRODUCT_TYPE% == 'limited'}purchased{else}subscribed to{/if} {%PRODUCT_DISPLAY_NAME%} and we're thrilled to welcome you to the Looter community. Your {if %PRODUCT_TYPE% != 'limited'}first{/if} crate should arrive between {%FIRST_SHIP_MONTH%} {%SHIP_DATE_RANGE%} (Don't worry you'll get a tracking email). {if %PRODUCT_TYPE% !== 'limited'}Remember, this is a {%PRODUCT_PLAN_PERIOD%}-month recurring subscription. THat means that after you receive your {%NUMBER_OF_CRATES%} crates, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).{/if}
-                      </p>
-                      <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
-                        <br/>Thanks! We Love You!<br/>
-                        Loot Crate
-                      </p>
-
+                    <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                      <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
+                        <tr>
+                          <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                            <p class="textLeft" style="text-align:left;color:#7a7880;font-weight:700;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                              <!-- Dynamic: Product Display Name -->
+                              {%PRODUCT_DISPLAY_NAME%}
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
                     </td>
                   </tr>
                 </table>
-              </td>
-            </tr>
-            <!-- End: HTML Text -->
+              </div>
+              <!-- End: Left Column (Top)-->
 
-            <!-- Start: Header HTML Text -->
-            <tr>
-                <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;"><table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+              <!--[if (gte mso 9)|(IE)]>
+                </td>
+              <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+              <![endif]-->
 
+              <!-- Start: Right Column (Bottom)-->
+              <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                  <tr>
+                    <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                      <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
                         <tr>
-                            <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;width:100%;"><p style="Margin:0;font-weight:700;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">YOUR ORDER </p></td>
-                        </tr>
-
-                    </table></td>
-            </tr>
-            <!-- End: HTML Text -->
-
-            <!-- Start: Spacer -->
-            <tr>
-                <td height="15" valign="top" align="center" class="center" style="height:1px;background-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;border-top-width:1px;border-top-color:#eff0f5;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#eff0f5;"></td>
-            </tr>
-            <!-- End: Spacer -->
-
-              <!-- Start: Two Column (Left over Right) -->
-
-              <tr>
-                  <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;"><!--[if (gte mso 9)|(IE)]>
-                          <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
-                          <tr>
-                          <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-                          <![endif]-->
-
-                      <!-- Start: Left Column (Top)-->
-
-                      <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-                          <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                              <tr>
-                                  <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                                          <tr>
-                                              <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><p class="textLeft" style="text-align:left;color:#7a7880;font-weight:700;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">Loot Crate</p></td>
-                                          </tr>
-                                      </table></td>
-                              </tr>
-                          </table>
-                      </div>
-
-                      <!-- End: Left Column (Top)-->
-
-                      <!--[if (gte mso 9)|(IE)]>
-                          </td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-                          <![endif]-->
-
-                      <!-- Start: Right Column (Bottom)-->
-
-                      <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-                          <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                              <tr>
-                                  <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                                          <tr>
-                                              <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                        <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">*|MONTHS|* Month Subscription </p>
-
-                                                        *|IF:MONTHS=1|*
-                                                        <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">(You get *|MONTHS|* crate) </p>
-                                                        *|ELSE:|*
-                                                        <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">(You get *|MONTHS|* crates) </p>
-                                                        *|END:IF|*
-                                              </td>
-                                          </tr>
-                                      </table></td>
-                              </tr>
-                          </table>
-                      </div>
-
-                      <!-- End: Right Column (Bottom)-->
-
-                      <!--[if (gte mso 9)|(IE)]>
+                          <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                            <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                              <!-- Dynamic: Months subscription -->
+                              {if %PRODUCT_TYPE% != 'limited'}{%PRODUCT_PLAN_PERIOD%} Month Subscription{/if}
+                            </p>
+                            <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                              <!-- Dynamic: Number of Crates -->
+                              {if %PRODUCT_TYPE% != 'limited'}(You get {%NUMBER_OF_CRATES%} crates){/if}
+                            </p>
                           </td>
-                          </tr>
-                          </table>
-                          <![endif]--></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End: Right Column (Bottom)-->
+
+              <!--[if (gte mso 9)|(IE)]>
+              </td>
               </tr>
-
-              <!-- End: Two Column (Left over Right) -->
-
-<!-- Start: Two Column (Left over Right) PRICE -->
-
-<tr>
-    <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;"><!--[if (gte mso 9)|(IE)]>
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
-            <tr>
-            <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-            <![endif]-->
-
-        <!-- Start: Left Column (Top)-->
-
-        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                <tr>
-                    <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                            <tr>
-                                <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><p class="textLeft" style="text-align:left;color:#7a7880;font-weight:200;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">Price:</p></td>
-                            </tr>
-                        </table></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- End: Left Column (Top)-->
-
-        <!--[if (gte mso 9)|(IE)]>
-            </td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-            <![endif]-->
-
-        <!-- Start: Right Column (Bottom)-->
-
-        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                <tr>
-                    <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                            <tr>
-                                <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
-
-                                          <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">*|CHECKOUT_SUBTOTAL|*</p>
-                                    </td>
-                            </tr>
-                        </table></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- End: Right Column (Bottom)-->
-
-        <!--[if (gte mso 9)|(IE)]>
+              </table>
+              <![endif]-->
             </td>
-            </tr>
-            </table>
-            <![endif]--></td>
-</tr>
+          </tr>
 
-<!-- End: Two Column (Left over Right) PRICE -->
+          <!-- End: Two Column (Left over Right) -->
 
-
-<!-- Start: Two Column (Left over Right) DISCOUNT -->
-
-<tr>
-    <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;"><!--[if (gte mso 9)|(IE)]>
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
-            <tr>
-            <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-            <![endif]-->
-
-        <!-- Start: Left Column (Top)-->
-
-        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+          <!-- Start: Two Column (Left over Right) PRICE -->
+          <tr>
+            <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;">
+              <!--[if (gte mso 9)|(IE)]>
+              <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
                 <tr>
-                    <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                            <tr>
-                                <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><p class="textLeft" style="text-align:left;color:#7a7880;font-weight:200;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">Discount:</p></td>
-                            </tr>
-                        </table></td>
-                </tr>
-            </table>
-        </div>
+                  <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+              <![endif]-->
 
-        <!-- End: Left Column (Top)-->
+              <!-- Start: Left Column (Top)-->
+              <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                  <tr>
+                    <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                      <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
+                        <tr>
+                          <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                            <p class="textLeft" style="text-align:left;color:#7a7880;font-weight:200;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                              Price:
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- End: Left Column (Top)-->
 
-        <!--[if (gte mso 9)|(IE)]>
-            </td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
-            <![endif]-->
+              <!--[if (gte mso 9)|(IE)]>
+                </td>
+                <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+              <![endif]-->
 
-        <!-- Start: Right Column (Bottom)-->
+              <!-- Start: Right Column (Bottom)-->
+              <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                  <tr>
+                    <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                      <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
+                        <tr>
+                          <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                            <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
+                              <!-- Dynamic: Price -->
+                              {%PRICE_BEFORE_TAX_AND_DISCOUNTS%}
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
-        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-            <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                <tr>
-                    <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;"><table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
-                            <tr>
-                                <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+              <!-- End: Right Column (Bottom)-->
 
-                                          <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">*|CHECKOUT_DISCOUNT|*</p>
-                                    </td>
-                            </tr>
-                        </table></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- End: Right Column (Bottom)-->
-
-        <!--[if (gte mso 9)|(IE)]>
+              <!--[if (gte mso 9)|(IE)]>
+              </td>
+              </tr>
+              </table>
+              <![endif]-->
             </td>
-            </tr>
-            </table>
-            <![endif]--></td>
-</tr>
+          </tr>
+          <!-- End: Two Column (Left over Right) PRICE -->
 
-<!-- End: Two Column (Left over Right) DISCOUNT -->
+
+          <!-- Start: Two Column (Left over Right) DISCOUNT -->
+          <tr>
+              <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;">
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;" >
+                  <tr>
+                    <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+                <![endif]-->
+
+                <!-- Start: Left Column (Top)-->
+                <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                  <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                    <tr>
+                      <td class="innerTextTwoColumn" style="padding-top:10px;padding-bottom:0px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                        <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
+                          <tr>
+                            <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                              <p class="textLeft" style="text-align:left;color:#7a7880;font-weight:200;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                                Discount:
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End: Left Column (Top)-->
+
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" >
+                <![endif]-->
+
+                <!-- Start: Right Column (Bottom)-->
+                <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                  <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                    <tr>
+                      <td class="innerText" style="padding-top:10px;padding-bottom:10px;padding-right:30px;padding-left:30px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                        <table class="contents" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;width:100%;font-size:16px;text-align:left;">
+                          <tr>
+                            <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                              <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
+                                <!-- Dynamic: Discount amount -->
+                                {%DISCOUNT_AMOUNT%}
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End: Right Column (Bottom)-->
+
+                  <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                      </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+          </tr>
+
+          <!-- End: Two Column (Left over Right) DISCOUNT -->
 
 
 <!-- Start: Two Column (Left over Right) SUBTOTAL -->
