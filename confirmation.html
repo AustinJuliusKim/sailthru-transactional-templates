@@ -449,7 +449,7 @@
                 <tr>
                   <td class="inner contents footer" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;font-size:12px;text-align:center;color:#7d7e7d;">
                     <!-- Replace: Subject Line Here -->
-                    <!-- Dynamic -->
+                    <!-- Dynamic: -->
                     <!--  PRODUCT_TYPE == [ 'limited']-->
                     <span style="color:#7a7880;">Congratulations! {if %PRODUCT_TYPE% == 'limited'}You bought{else}You are now subscribed to{/if} {%PRODUCT_DISPLAY_NAME%}</span>
                   </td>
@@ -468,8 +468,8 @@
                     <div style="text-align:center;">
                       <a href="https://www.lootcrate.com/" target="_blank" style="color:#e4e4e4;text-decoration:underline;">
                         <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
+                        <!-- Dynamic: Header Logo-->
                         <!-- <img src={%LOGO_URL%} alt={%PRODUCT_DISPLAY_NAME%} width="60" class="logo button" style="display:inline-block;" title={%PRODUCT_DISPLAY_NAME%} border="0"> -->
-
                       </a>
                     </div>
                   </td>
@@ -480,34 +480,35 @@
           <!-- End: HEADER -->
 
           <!-- Start: CONTENT-->
-
             <!-- Start: HTML Text -->
             <tr>
-                <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;"><table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
-                        <tr>
-                            <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:0px;padding-right:30px;padding-left:30px;width:100%;"><p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;font-weight:400;line-height:3;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">Hi *|FNAME|*,</p>
-                                <p class="textLeft" style="text-align:left;color:#7a7880;font-size:28px;line-height:1.5;font-weight:100;margin-top:0;margin-bottom:0;font-weight:700;margin-right:0;margin-left:0;">Thank you for your subscription!</p></td>
-                        </tr>
-                        <tr>
-                          <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
-                            *|IF:MONTHS=1|*
-                              <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
-                              You did it!  You've successfully subscribed and we're thrilled to welcome you to the Looter community.  Your first crate should arrive between *|MDATE|* 20-*|FDATE|* (don't worry, you’ll get a tracking email).  Remember, this is a *|MONTHS|*-month recurring subscription.  That means after you receive your crate, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).
-                              </p>
-                              *|ELSE:|*
-                              <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
-                              You did it!  You've successfully subscribed and we're thrilled to welcome you to the Looter community.  Your first crate should arrive between *|MDATE|* 20-*|FDATE|* (don't worry, you'll get a tracking email).  Remember, this is a *|MONTHS|*-month recurring subscription.  That means after you receive your *|MONTHS|* crates, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).
-                              </p>
-                            *|END:IF|*
-                              <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
-                                <br/>Thanks! We Love You.<br/><br/>
-                              </p>
-                              <img style="width:90px;" src="http://cdn-store.lootcrate.com/em/transactional/lc-logo-black-sm.png" alt="Loot Crate">
-                          </td>
+              <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;">
+                <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
+                  <tr>
+                    <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:0px;padding-right:30px;padding-left:30px;width:100%;">
+                      <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;font-weight:400;line-height:3;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
+                        <!-- Dynamic: Looter Name -->
+                        Hi {%LOOTER_OR_FIRST_NAME%},
+                      </p>
+                      <p class="textLeft" style="text-align:left;color:#7a7880;font-size:28px;line-height:1.5;font-weight:100;margin-top:0;margin-bottom:0;font-weight:700;margin-right:0;margin-left:0;">
+                        Thank you for your {if %PRODUCT_TYPE% == 'limited'}purchase{else}subscription{/if}!
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
+                      <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
+                        You did it! You've successfully {if %PRODUCT_TYPE% == 'limited'}purchased{else}subscribed to{/if} {%PRODUCT_DISPLAY_NAME%} and we're thrilled to welcome you to the Looter community. Your {if %PRODUCT_TYPE% != 'limited'}first{/if} crate should arrive between {%FIRST_SHIP_MONTH%} {%SHIP_DATE_RANGE%} (Don't worry you'll get a tracking email). {if %PRODUCT_TYPE% !== 'limited'}Remember, this is a {%PRODUCT_PLAN_PERIOD%}-month recurring subscription. THat means that after you receive your {%NUMBER_OF_CRATES%} crates, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).{/if}
+                      </p>
+                      <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
+                        <br/>Thanks! We Love You!<br/>
+                        Loot Crate
+                      </p>
 
-
-                        </tr>
-                    </table></td>
+                    </td>
+                  </tr>
+                </table>
+              </td>
             </tr>
             <!-- End: HTML Text -->
 
