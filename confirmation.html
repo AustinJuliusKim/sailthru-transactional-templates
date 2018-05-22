@@ -395,8 +395,8 @@
                               <td class="inner contents footer" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;width:100%;font-size:12px;text-align:center;color:#7d7e7d;">
                                 <!-- Replace: Subject Line Here -->
                                 <!-- Dynamic: -->
-                                <!--  PRODUCT_TYPE == [ 'limited']-->
-                                <span style="color:#7a7880;">Congratulations! {if %PRODUCT_TYPE% == 'limited'}You bought{else}You are now subscribed to{/if} {%PRODUCT_DISPLAY_NAME%}</span>
+
+                                <span style="color:#7a7880;">Congratulations! {if PRODUCT_TYPE == 'limited'}You bought{else}You are now subscribed to{/if} {PRODUCT_DISPLAY_NAME}</span>
                               </td>
                             </tr>
                           </table>
@@ -411,9 +411,12 @@
                               <td class="headerNav contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:35px;padding-bottom:35px;padding-right:20px;padding-left:20px;width:100%;">
                                 <div style="text-align:center;">
                                   <a href="https://www.lootcrate.com/" target="_blank" style="color:#e4e4e4;text-decoration:underline;">
-                                    <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
+                                    {if LOGO_URL }
                                     <!-- Dynamic: Header Logo-->
-                                    <img src={%LOGO_URL%} alt={%PRODUCT_DISPLAY_NAME%} width="60" class="logo button" style="display:inline-block;" title={%PRODUCT_DISPLAY_NAME%} border="0">
+                                    <img src={LOGO_URL} alt={PRODUCT_DISPLAY_NAME} width="60" class="logo button" style="display:inline-block;" title={PRODUCT_DISPLAY_NAME} border="0">
+                                    {else}
+                                    <img src="http://cdn-store.lootcrate.com/em/global/loot-crate-w.png" alt="Loot Crate" width="60" class="logo button" style="display:inline-block;" title="Loot Crate" border="0">
+                                    {/if}
                                   </a>
                                 </div>
                               </td>
@@ -432,11 +435,11 @@
                               <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:0px;padding-right:30px;padding-left:30px;width:100%;">
                                 <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;font-weight:400;line-height:3;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
                                   <!-- Dynamic: Looter Name -->
-                                  Hi {%LOOTER_OR_FIRST_NAME%},
+                                  Hi {LOOTER_OR_FULL_NAME},
                                 </p>
                                 <p class="textLeft" style="text-align:left;color:#7a7880;font-size:28px;line-height:1.5;font-weight:100;margin-top:0;margin-bottom:0;font-weight:700;margin-right:0;margin-left:0;">
                                   <!-- Dynamic:  -->
-                                  Thank you for your {if %PRODUCT_TYPE% == 'limited'}purchase{else}subscription{/if}!
+                                  Thank you for your {if PRODUCT_TYPE == 'limited'}purchase{else}subscription{/if}!
                                 </p>
                               </td>
                             </tr>
@@ -444,7 +447,7 @@
                               <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
                                 <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
                                   <!-- Dynamic:  -->
-                                  You did it! You've successfully {if %PRODUCT_TYPE% == 'limited'}purchased{else}subscribed to{/if} {%PRODUCT_DISPLAY_NAME%} and we're thrilled to welcome you to the Looter community. Your {if %PRODUCT_TYPE% != 'limited'}first{/if} crate should arrive between {%FIRST_SHIP_MONTH%} {%SHIP_DATE_RANGE%} (Don't worry you'll get a tracking email). {if %PRODUCT_TYPE% !== 'limited'}Remember, this is a {%PRODUCT_PLAN_PERIOD%}-month recurring subscription. THat means that after you receive your {%NUMBER_OF_CRATES%} crates, your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).{/if}
+                                  You did it! You've successfully {if PRODUCT_TYPE == 'limited'}purchased{else}subscribed to{/if} {PRODUCT_DISPLAY_NAME} and we're thrilled to welcome you to the Looter community. {if PREORDER} This is a presale.{/if} Your {if PRODUCT_TYPE != 'limited'}first{/if} crate should arrive between {FIRST_SHIP_MONTH} {SHIP_DATE_RANGE} (Don't worry you'll get a tracking email). {if PRODUCT_TYPE != 'limited'}Remember, this is a {PRODUCT_PLAN_PERIOD}-month recurring subscription. That means that after you receive your {NUMBER_OF_CRATES} crate(s), your subscription will automatically renew (unless you cancel or there's a zombie apocalypse).{/if}
                                 </p>
                                 <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">
                                   <br/>Thanks! We Love You!<br/>
@@ -497,7 +500,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-weight:700;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Product Display Name -->
-                                                {%PRODUCT_DISPLAY_NAME%}
+                                                {PRODUCT_DISPLAY_NAME}
                                               </p>
                                             </td>
                                           </tr>
@@ -521,11 +524,11 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Months subscription -->
-                                                {if %PRODUCT_TYPE% != 'limited'}{%PRODUCT_PLAN_PERIOD%} Month Subscription{/if}
+                                                {if PRODUCT_TYPE != 'limited'}{PRODUCT_PLAN_PERIOD} Month Subscription{/if}
                                               </p>
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Number of Crates -->
-                                                {if %PRODUCT_TYPE% != 'limited'}(You get {%NUMBER_OF_CRATES%} crates){/if}
+                                                {if PRODUCT_TYPE != 'limited'}(You get {NUMBER_OF_CRATES} crate(s){/if}
                                               </p>
                                             </td>
                                           </tr>
@@ -584,7 +587,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Price -->
-                                                {%PRICE_BEFORE_TAX_AND_DISCOUNTS%}
+                                                {PRICE_BEFORE_TAX_AND_DISCOUNTS}
                                               </p>
                                             </td>
                                           </tr>
@@ -643,7 +646,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Discount amount -->
-                                                {%DISCOUNT_AMOUNT%}
+                                                {DISCOUNT_AMOUNT}
                                               </p>
                                             </td>
                                           </tr>
@@ -702,7 +705,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Price after Discount -->
-                                                {%PRICE_AFTER_DISCOUNT%}
+                                                {PRICE_AFTER_DISCOUNT}
                                               </p>
                                             </td>
                                           </tr>
@@ -738,7 +741,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-weight:200;font-size:16px;line-height:1.9;letter-spacing:1px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Tax Rate -->
-                                                Tax ({%TAX_RATE%}):
+                                                Tax ({TAX_RATE}%):
                                               </p>
                                             </td>
                                           </tr>
@@ -762,7 +765,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:200;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Tax Amount -->
-                                                {%TAX_AMOUNT%}
+                                                {TAX_AMOUNT}
                                               </p>
                                             </td>
                                           </tr>
@@ -821,7 +824,7 @@
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;font-weight:700;margin-bottom:0;margin-right:0;margin-left:0;">
                                                 <!-- Dynamic: Final Total -->
-                                                {%PRICE_AFTER_DISCOUNT_AND_TAX%}
+                                                {PRICE_AFTER_DISCOUNT_AND_TAX}
                                               </p>
                                             </td>
                                           </tr>
@@ -841,7 +844,7 @@
                       <!-- End: Two Column (Left over Right) TOTAL -->
 
                       <!-- Dynamic: Subscription -->
-                      {if %PRODUCT_TYPE% != 'limited'}
+                      {if PRODUCT_TYPE != 'limited'}
                       <!-- Start: Two Column (Left over Right) -->
                       <tr>
                         <td class="two-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align:center;font-size:0;background-color:#ffffff;border-color:#ffffff;">
@@ -882,7 +885,7 @@
                                           <tr>
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
-                                                {%PRODUCT_PLAN_PERIOD%} month auto renew plan
+                                                {PRODUCT_PLAN_PERIOD} month auto renew plan
                                               </p>
                                             </td>
                                           </tr>
@@ -940,7 +943,7 @@
                                           <tr>
                                             <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                               <p class="textLeft" style="text-align:left;color:#7a7880;font-size:16px;line-height:1.9;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;">
-                                                {%FIRST_REBILL_DATE%}
+                                                {FIRST_REBILL_DATE}
                                               </p>
                                             </td>
                                           </tr>
@@ -964,7 +967,7 @@
                           <table width="100%" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:sans-serif;">
                             <tr>
                               <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
-                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">This subscription will automatically renew every {%PRODUCT_PLAN_PERIOD%} months. Your account will be charged on your renewal date. </p>
+                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">This subscription will automatically renew every {PRODUCT_PLAN_PERIOD} months. Your account will be charged on your renewal date. </p>
                                 <br/>
                                 <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">You may cancel your subscription any time before the renewal date.</p>
                               </td>
@@ -983,7 +986,7 @@
                               <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
                                 <p style="Margin:0;font-weight:400;font-weight:700;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Delivery Information: </p>
                                 <!-- Dyanamic: Shipping date -->
-                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Estimated arrival dates for the US: {%FIRST_SHIP_MONTH%} {%SHIP_DATE_RANGE}. Please allow extra time for international deliveries.</p>
+                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Estimated arrival dates for the US: {FIRST_SHIP_MONTH} {SHIP_DATE_RANGE}. Please allow extra time for international deliveries.</p>
                               </td>
                             </tr>
                           </table>
@@ -1020,7 +1023,7 @@
                               <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:20px;padding-bottom:10px;padding-right:30px;padding-left:30px;width:100%;">
                                 <p style="Margin:0;font-weight:400;font-weight:700;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Shipping &amp; Arrivals: </p>
                                 <!-- Dynamic: Product Type -->
-                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">You will receive a tracking number {if %PRODUCT_TYPE% != 'limited'}for each month’s shipment, {/if}after your crate ships.</p>
+                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">You will receive a tracking number {if PRODUCT_TYPE != 'limited'}for each month’s shipment, {/if}after your crate ships.</p>
                               </td>
                             </tr>
                           </table>
@@ -1034,7 +1037,7 @@
                             <tr>
                               <td class="innerText contents" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:10px;padding-bottom:20px;padding-right:30px;padding-left:30px;width:100%;">
                                 <p style="Margin:0;font-weight:400;font-weight:700;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Renewal: </p>
-                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Renewals occur automatically at the end of each subscription period. Please note, if you signed up between the 6th-19th, your renewal will be moved to the 5th of the month.</p>
+                                <p style="Margin:0;font-weight:400;text-align:left;font-size:16px;line-height:1.6;color:#7a7880;">Renewals occur automatically at the end of each subscription period. Please note, if you signed up between the dates of {PRODUCT_RENEWAL_DATE_RANGE}, your renewal will be moved to {PRODUCT_REBILL_DATE}.</p>
                               </td>
                             </tr>
                           </table>
@@ -1061,7 +1064,7 @@
                       </tr>
                       <!-- End: Spacer -->
                       <!-- Dynamic: Subscription -->
-                      {if %PRODUCT_TYPE% != 'limited'}
+                      {if PRODUCT_TYPE != 'limited'}
                       <!-- Start: HTML Text -->
                       <tr>
                         <td class="one-column" style="background-color:#ffffff;border-color:#ffffff;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#1e1e1e !important;background-color:#ffffff !important;">
@@ -1072,7 +1075,7 @@
                                 <p style="Margin:0;font-weight:700;text-align:left;font-size:12px;line-height:1.6;color:#7a7880;">TERMS OF THE OFFER-AUTOMATIC RENEWAL OF MEMBERSHIP</p>
                                 <br/>
                                 <!-- Dynamic: Price -->
-                                <p style="Margin:0;font-weight:400;text-align:left;font-size:12px;line-height:1.6;color:#7a7880;"> On-going automatic {%PRICE_BEFORE_TAX_AND_DISCOUNTS%} membership renewal fees (not including any applicable tax or discounts) will be charged to your card on file each renewal date until you cancel your Loot Crate Membership. Loot Crate will automatically renew your Loot Crate Membership on each anniversary date of the Loot Crate Membership and charge your credit card on the renewal date in the amount of the Order Total. Each Loot Crate Membership renewal period is for {%PRODUCT_PLAN_PERIOD%} month(s). The entire Loot Crate Terms of Service are found here: <a href="https://www.lootcrate.com/terms-conditions">Terms of Service</a>.</p>
+                                <p style="Margin:0;font-weight:400;text-align:left;font-size:12px;line-height:1.6;color:#7a7880;"> On-going automatic {PRICE_BEFORE_TAX_AND_DISCOUNTS} membership renewal fees (not including any applicable tax or discounts) will be charged to your card on file each renewal date until you cancel your Loot Crate Membership. Loot Crate will automatically renew your Loot Crate Membership on each anniversary date of the Loot Crate Membership and charge your credit card on the renewal date in the amount of the Order Total. Each Loot Crate Membership renewal period is for {PRODUCT_PLAN_PERIOD} month(s). The entire Loot Crate Terms of Service are found here: <a href="https://www.lootcrate.com/terms-conditions">Terms of Service</a>.</p>
                               </td>
                             </tr>
                           </table>
@@ -1090,7 +1093,7 @@
                                 <br/>
                                 <p style="Margin:0;font-weight:400;text-align:left;font-size:12px;line-height:1.6;color:#7a7880;">
                                   <!-- Dynamic: Rebill -->
-                                  You may cancel your Membership at any time by logging on to your account within <a href="https://www.lootcrate.com">lootcrate.com</a>, selecting "Manage Account", and following the instructions to cancel. Cancellation requests received at least 48 hours prior to the renewal date will take effect for the following subscription term. Your renewal date will be the {%PRODUCT_REBILL_DATE%}. If you subscribe outside the {%PRODUCT_RENEWAL_DATE_RANGE%}, your renewal date will be your actual sign up date.
+                                  You may cancel your Membership at any time by logging on to your account within <a href="https://www.lootcrate.com">lootcrate.com</a>, selecting "Manage Account", and following the instructions to cancel. Cancellation requests received at least 48 hours prior to the renewal date will take effect for the following subscription term. Your renewal date will be the {PRODUCT_REBILL_DATE}. If you subscribe outside the {PRODUCT_RENEWAL_DATE_RANGE}, your renewal date will be your actual sign up date.
                                   <br><br>
                                   Please retain this email with this cancellation information. If you have any questions, please see our <a href="https://help.lootcrate.com/hc/en-us">Help Center</a> for answers! If you still need help, <a href="https://help.lootcrate.com/hc/en-us/requests/new">contact our support team</a>.
                                 </p>
